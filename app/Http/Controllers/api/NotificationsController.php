@@ -13,7 +13,7 @@ class NotificationsController extends Controller
     {
     	$token = $request->input("token");
         $message = $request->input("message");
-    	$apikey = "AIzaSyASmIhn2XJnyxnPrlwym77o5CI6KTGU2_Y";
+    	$apikey = "AAAACTPQTXY:APA91bHuMqb_33kLpp8YG_a1_-ZULFHWGrGERyVvOL18V1czlyUqOJzToMBB8fF2ywuLIQLa0zRSZ2RbbyPl9Ave1QIJAOdnt7dgw5kPP138E0K8rxhxxz0S0Tnbhi8GyukhkmdPiOrh";
 		$fcmUrl = 'https://fcm.googleapis.com/fcm/send';
 
 	    $notification = [
