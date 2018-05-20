@@ -13,18 +13,18 @@ class NotificationsController extends Controller
     {
     	$token = $request->input("token");
         $message = $request->input("message");
-    	$apikey = env('FIREBASE_API_KEY');
+    	$apikey = "AIzaSyASmIhn2XJnyxnPrlwym77o5CI6KTGU2_Y";
 		$fcmUrl = 'https://fcm.googleapis.com/fcm/send';
 
 	    $notification = [
-            'title' =>'Yay Pan Sar',
+            'title' =>'Lu Nge Media',
             'body' => $message
         ];
         $extraNotificationData = ["message" => $notification,"moredata" =>'dd'];
 
         $fcmNotification = [
             //'registration_ids' => $tokenList, //multple token array
-            'to'        => $token, //single token
+            'to'        => '/topics/android', //single token
             'notification' => $notification,
             'data' => $extraNotificationData
         ];
